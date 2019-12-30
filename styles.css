@@ -35,18 +35,20 @@ align-items: center;
 .navitem{
 margin: 0 20px;
 list-style: none;
+
 }
 .navitem:hover{
     color:var(--main-red);
 transform: scale(1.1);
+cursor: pointer;
 }
 .navitems a{
     text-decoration: none;
 
 }
-.login{
-    
-    border: 2px solid var(--main-red);
+.red{
+    background-color:var(--main-red);
+ color: white;
     padding:5px 10px;
     border-radius:5px;
 }
@@ -139,6 +141,39 @@ flex-direction: column;
 /*  feature area end */
 
 
+/* download section start  */
+.download-section{
+display: flex;
+flex-direction: column;
+    align-items:center;
+    padding: 20px 20%;
+
+}
+.blue{
+ background-color: var(--main-blue);
+ color: white;   
+}
+
+.download-section button:hover{
+    background-color: white;
+    color:var(--main-blue);
+
+}
+.browsers{
+    margin: 20px ;
+    display: flex;
+}
+
+.chrome{
+    padding: 10px 20px;
+}
+.firefox{
+    padding:50px 20px;
+}
+.opera{
+    padding:90px 20px;
+}
+/* download section end  */
 
 
 
@@ -160,5 +195,83 @@ border-radius: 5px;
 button:hover{
     border-color: var(--dark);
     transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* Start faq section */
+.faq-section{
+    padding: 30px 20% ;
+
+}
+
+.question{
+color: var(--dark);
+margin-top:20px;
+}
+.question::before{
+    content: '\2795';
+
+    float: right;
+}
+.question.aactive,.question:hover{
+    background-color: hsl(220, 20%, 88%);
+}
+.question.aactive::before{
+    content: '\2796';
+
+    float: right;
+}
+
+.answer{
+display: none;
+    margin-top: 5px;
+    color:var(--grey);
+}
+.aactive{
+    display:block;
+
+}
+
+.contact{
+    height: 30vh;
+    background-color:var(--main-blue);
+    margin-bottom:-16px;
+text-align: center;
+padding: 90px 50px;
+}
+.contact h3{
+    color: white;
+    font-size:1.4rem;
+}
+.contact p{
+    color: white;
+
+}
+
+.contact button, .contact input{
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px ;
+}
+.bottom-bar{
+    display: flex;
+    height: 10vh;
+    background-color:var(--dark);
+    width:100%;
+    padding: 30px 10%
+}
+.bottom-bar ul{
+    display: flex;
+    float: left;
+}
+.bottom-bar li{
+    list-style: none;
+color:white;
+margin: 0 30px;
+}
+
+.bottom-bar .logo{
+    color:white
 }
 

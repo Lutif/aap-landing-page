@@ -7,9 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Bookmark landing page</title>
+  <title>Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -22,7 +21,7 @@
   <li class=navitem>  Features</li class=navitem>
   <li class=navitem>  Pricing </li>
   <li class=navitem>  Contact</li> 
-  <li class='login navitem'>Login</li>
+  <li class='login  red navitem'>Login</li>
 </ul>
 </nav>
 <div class="main-area">
@@ -32,7 +31,7 @@
   <p>A clean and simple interface to organize your favourite websites. Open a new 
   browser tab and see your sites load instantly. Try it for free.</p>
 
-  <button>Get it on Chrome</button>
+  <button class='blue'>Get it on Chrome</button>
   <button>Get it on Firefox</button>
 
 </div>
@@ -44,7 +43,7 @@
   <p>Our aim is to make it quick and easy for you to access your favourite websites. 
   Your bookmarks sync between your devices so you can access them on the go.</p>
 <div class="feature-tabs">
-  <div class="bookmark feature-tab">
+  <div class="bookmark active feature-tab">
     Simple Bookmarking
   </div>
   <div  class='searching feature-tab'>
@@ -64,7 +63,7 @@
  <p> Organize your bookmarks however you like. Our simple drag-and-drop interface 
   gives you complete control over how you manage your favourite sites.
 </p>
-  <button>More Info</button>
+  <button class='blue'>More Info</button>
 </div>
 </div>
 
@@ -79,7 +78,7 @@
   Our powerful search feature will help you find saved sites in no time at all. 
   No need to trawl through all of your bookmarks.
 </p>
-<button>More Info</button>
+<button class='blue'>More Info</button>
 </div>
 </div>
   
@@ -92,7 +91,7 @@
   Easily share your bookmarks and collections with others. Create a shareable 
   link that you can send at the click of a button.
 </p>
-<button>More Info</button>
+<button class='blue'>More Info</button>
 </div>
 </div>
 </div>
@@ -104,29 +103,32 @@
   <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve 
   got a favourite you’d like us to prioritize.</p>
 </div>
+<div class="browsers">
+  <div class="chrome">
+    <img src='images/logo-chrome.svg'>
   <h3 class='heading tertiary '>
     Add to Chrome
   </h3>
   <p>Minimum version 62 </p>
  <button>  Add & Install Extension </button>
-
+</div>
+<div class='firefox'>
+  <img src='images/logo-firefox.svg'>
  <h3 class='heading tertiary '>
   Add to Firefox
 </h3>
 <p>  Minimum version 55 </p>
-  <button>
-  Add & Install Extension
-  </button>
-
+  <button>  Add & Install Extension</button>
+</div>
+<div class='opera'>
+  <img src='images/logo-opera.svg'>
   <h3 class='heading tertiary '>
   Add to Opera 
 </h3>
-  <p>
-  Minimum version 46
-</p>
-<button>
-  Add & Install Extension
-</button>
+  <p>  Minimum version 46</p>
+<button>  Add & Install Extension </button>
+</div>
+</div>
 </div>
 <div class="faq-section">
   Frequently Asked Questions
@@ -136,7 +138,8 @@
   <div class="question">
   <!-- Question 1 -->
   What is Bookmark?
-<div class="answer">
+
+  <div class="answer">
   <!-- Answer 1 -->
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
   justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
@@ -167,22 +170,26 @@
   <div class="question">
   <!-- Question 4 -->
   What about other Chromium browsers?
-
+  <div class="answer">
   <!-- Answer 4 -->
   Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
   vitae neque eget nisl gravida pellentesque non ut velit.
+  </div>
 </div>
-  More Info
+  <button class='blue'>More Info</button>
 </div>
 <div class='contact'>
-35,000+ already joined
+ <p>35,000+ already joined</p>
 
-  Stay up-to-date with what we’re doing
-
-  Contact Us
+<h3>  Stay up-to-date with what we’re doing </h3>
+<div class='form'>
+  <input type='text' placeholder='Enter your email address'>
+  <button class='red'> Contact Us </button>
+</div>
 </div>
 <div class='bottom-bar'>
-<ul>
+  <div class='logo'> <img src='images/logo-bookmark.svg' alt='Bookmark' > </div>
+  <ul>
   <li class ='navitems'>Features</li>
   <li class ='navitems'>Pricing</li>
   <li class ='navitems'>  Contact</li>
@@ -191,12 +198,6 @@
   
 
 </div>
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
   <script src="./script.js"></script>
 </body>
 </html>
