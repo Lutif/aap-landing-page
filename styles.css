@@ -5,11 +5,15 @@
     --dark : hsl(229, 31%, 21%);
 }
 
+*{
+    box-sizing: border-box;
+    max-width: 100vw;
+}
 html,body{
+    border: 1px solid blue;
     background-color: whitesmoke;
 margin: 0;
 padding: 0;
-box-sizing: border-box;
 font-family: 'Rubik', sans-serif;
 
 }
@@ -20,9 +24,10 @@ p{
 
 /* Navbar area start */
 .navbar{
+box-sizing: border-box;
+    width: 50vw;
     box-sizing: border-box;
     display:flex;
-    width: 100%;
     align-items: center;
 justify-content: space-between;
 padding:20px  50px;
@@ -211,6 +216,7 @@ margin-top:20px;
 }
 .question::before{
     content: '\2795';
+    content: '\8964';
 
     float: right;
 }
@@ -255,11 +261,12 @@ padding: 90px 50px;
     padding: 5px ;
 }
 .bottom-bar{
+    box-sizing: border-box;
     display: flex;
-    height: 10vh;
+    height: 20vh;
     background-color:var(--dark);
-    width:100%;
-    padding: 30px 10%
+    width:100vw;
+    padding: 30px 10vw
 }
 .bottom-bar ul{
     display: flex;
