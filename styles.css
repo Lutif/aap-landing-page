@@ -11,8 +11,6 @@
 
 }
 html,body{
-    border: 1px solid black;
-    background-color: whitesmoke;
 margin: 0;
 padding: 0;
 font-family: 'Rubik', sans-serif;
@@ -30,10 +28,10 @@ p{
 
     align-items: center;
 justify-content: space-between;
-padding:20px  50px;
+padding:20px  5%;
 box-shadow:0 2px 10px rgb(241, 218, 218);
 }
-.navbar ul{
+.navitems{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -55,7 +53,7 @@ cursor: pointer;
 .red{
     background-color:var(--main-red);
  color: white;
-    padding:5px 10px;
+    padding:5px 20px;
     border-radius:5px;
 }
 
@@ -68,12 +66,11 @@ cursor: pointer;
 width: 100%;
 display: flex;
 flex-wrap: wrap;
-padding: 20px 30px;
+padding: 20px 10%;
 }
 
 .intro{
 width: 50%;
-box-sizing: border-box;
 min-width: 300px;
 }
 .main.heading{
@@ -106,7 +103,7 @@ align-items: center;
 flex-direction: column;
 }
 .feature > p{
-    padding: 20px 30%;
+    padding: 20px 10%;
     color: var(--grey)
 }
 .feature-tabs{
@@ -118,7 +115,7 @@ flex-direction: column;
 
 .feature-tab{
     margin: 0 20px;
-    padding:30px 20px
+    padding:30px 20px;
 }
 .feature-details{
     display: none;
@@ -138,7 +135,7 @@ flex-direction: column;
     display: flex;
     flex-wrap: wrap;
 
-    padding: 30px 0;
+    padding: 30px 40px;
 }
 .feature-details button{
     display: block;
@@ -147,7 +144,6 @@ flex-direction: column;
 
 .content{
     width: 50%;
-    padding-left: 20px;
 }
 .feature-details img{
     width: 40%;
@@ -163,7 +159,7 @@ flex-direction: column;
 display: flex;
 flex-direction: column;
     align-items:center;
-    padding: 20px 20%;
+    padding: 20px 10%;
 
 }
 .blue{
@@ -210,7 +206,7 @@ button:hover{
 
 /* Start faq section */
 .faq-section{
-    padding: 30px 20% ;
+    padding: 30px 10% ;
 
 }
 
@@ -220,7 +216,6 @@ margin-top:20px;
 }
 .question::before{
     content: '\2795';
-    content: '\8964';
 
     float: right;
 }
@@ -244,11 +239,10 @@ display: none;
 }
 
 .contact{
-    height: 30vh;
+    min-height: 30vh;
     background-color:var(--main-blue);
-    margin-bottom:-16px;
 text-align: center;
-padding: 90px 50px;
+padding:20px
 }
 .contact h3{
     color: white;
@@ -265,12 +259,11 @@ padding: 90px 50px;
     padding: 5px ;
 }
 .bottom-bar{
-    box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     height: 20vh;
     background-color:var(--dark);
-    width:100vw;
-    padding: 30px 10vw
+    padding: 30px 20%;
 }
 .bottom-bar ul{
     display: flex;
@@ -293,22 +286,92 @@ margin: 0 30px;
 /* adding resposiveness */
 
 @media  only screen and (max-width: 480px){
-button{
+    .intro{
+        order: 2;
+    }
+    
+   input, button{
     width:70vw;
 }
 
     .content,.feature-tabs,.chrome,.firefox,.opera{
-        align-content: center;
     width: 80vw;
+
     }
 
 
-    .navitems , .navbar ul{
+    .navitems{
     display:none;
 }
 
+/* adding hamburger menu */
+.ham-menu > div{
+    background-color: black;
+    height:5px;
+    width: 30px;
+    margin: 5px;
+    transition: 0.3s;
+  }
+  .ham-active .ham-center{
+    opacity:0;
+  }
+  
+  .ham-active .ham-top{
+    transform: rotate(-45deg) translate(-8px,8px)
+  }
+  .ham-active .ham-bottom{
+    transform: rotate(45deg) translate(-6px,-6px)
+  }
 
+/* mobile menu styles */
+.mobile-menu{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
 
+  display: flex;
+  flex-direction: column;
 
+  align-items: flex-start;
+  justify-content:initial;
+  padding:20px;
+  box-shadow:none;
+  
+}
+.mobile-menu .ham-menu > div{
+    background-color:white;
+}
+.mobile-menu .ham-menu{
+    position:absolute;
+    top: 20px; 
+    right:20px;
+}
 
+.mobile-menu .navitems{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    margin: 50px auto;
+}
+.mobile-menu .navitem{
+color : white; 
+font-size: 2rem;
+width: 100%;
+text-align: center;
+margin: 30px auto;
+border-bottom: 1px solid var(--grey);
+}
+.mobile-menu .red{
+    background-color:transparent;
+    border: 1px solid var(--grey)
+}
+.mobile-menu .login:hover{
+    background-color:white;
+    color: black;
+}
 }

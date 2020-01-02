@@ -25,3 +25,13 @@ document.querySelectorAll('.question').forEach(question => {
         question.children[0].classList.toggle('aactive')
     })
 })
+
+
+
+
+//adding hamburger menu
+function showMenu(element){
+    console.log(element)
+    element.classList.toggle('ham-active')
+    document.querySelector('.navbar').classList.toggle('mobile-menu')
+  }
